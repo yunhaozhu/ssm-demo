@@ -10,24 +10,25 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small>Add A book</small>
+                    <small>Edit</small>
                 </h1>
             </div>
         </div>
     </div>
 
-    <form action="${pageContext.request.contextPath}/book/addBook" method="post">
+    <form action="${pageContext.request.contextPath}/book/editBook" method="post">
+        <input type="hidden" name="bookID" value="${Book.bookID}">
         <div class="from-group">
             <label for="bookName">Book Name:</label>
-            <input type="text" class="form-control" name="bookName" id="bookName" required>
+            <input type="text" class="form-control" name="bookName" id="bookName" value="${Book.bookName}" required>
         </div>
         <div class="from-group">
             <label for="stuck">Stuck:</label>
-            <input type="text" class="form-control" name="bookCounts" id="stuck" required>
+            <input type="text" class="form-control" name="bookCounts" id="stuck" value="${Book.bookCounts}" required>
         </div>
         <div class="from-group">
             <label for="description">Description:</label>
-            <input type="text" class="form-control" name="detail" id="description" required>
+            <input type="text" class="form-control" name="detail" id="description" value="${Book.detail}" required>
         </div>
         <div class="from-group">
             <input type="submit" class="form-control" value="Submit">

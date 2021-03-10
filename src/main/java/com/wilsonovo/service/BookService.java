@@ -1,6 +1,7 @@
 package com.wilsonovo.service;
 
 import com.wilsonovo.pojo.Books;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface BookService {
     Books queryBookById(int id);
 
     List<Books> queryAllBook();
+
+    Books queryBookByName(String bookName);
 }
